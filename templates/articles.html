@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="content">
+    {% for article in articles %}
+    <article class="post-preview">
+        <h1 class="post_title">{{article.title}}</h1>
+        <p class="post-author">作者:{{article.title}} &nbsp; {{article.create_date}}</p>
+        <p>{{article.content | safe | truncate(200, True)}}</p>
+        <div class="clearfix">
+            <a class="btn btn-primary float-right" href="article/{{article.id}}">查看全文-></a>
+        </div>
+    </article>
+    <hr class="underline">
+    {% endfor %}
+</div>
+{% endblock %}
