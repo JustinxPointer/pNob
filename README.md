@@ -7,7 +7,8 @@ mac\
 ```curl -LsSf https://astral.sh/uv/install.sh | sh```\
 windows\
 ```powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"```\
-3.进入项目文件夹\
+3.进入项目文件夹并拉取依赖\
+```cd pNob```\
 ```uv sync```\
 4.连接mysql,将notebook.sql导入即可，然后根据你的mysql配置更改utili文件中的user和password，默认root用户不用更改\
 5.一键运行本项目\
